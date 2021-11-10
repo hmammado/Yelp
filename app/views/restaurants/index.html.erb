@@ -1,0 +1,17 @@
+<div class = 'container'>
+
+<%= link_to 'Add New', new_restaurant_path %>
+
+  <div class = everything>
+    <% @restaurants.each do |restaurant|  %>
+      <div class = full>
+        <h2> <%= restaurant.name  %></h2>
+          <div class = 'infomation'>
+            <%=restaurant.address %>
+            <%=restaurant.category%>
+            <%= link_to 'Explore', restaurant_path(restaurant)%>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
